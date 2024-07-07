@@ -1,7 +1,14 @@
 0 0 1000 1000
+point 10 10
 point 100 100
+point 200 200
+point 300 300
+point 400 400
+point 500 500
+point 600 600
+point 700 700
+point 800 800
 point 900 900
-point 10 5
-rect 1 2 3 4
-hline 100 200 50
-vline 100 200 40
+rect 50 50 300 300
+hline 100 500 500
+vline 100 500 500
