@@ -10,7 +10,14 @@ class Object {
 class Point : public Object {
  public:
   Point(int x, int y) : x(x), y(y) {}
-  void draw(Bitmap& bmp) override {}
+  void draw(Bitmap& bmp) override {
+    if (x >= 0 && x < bmp.m_width && y >= 0 && y < bmp.m_height) {
+      size_t idx = (y * bmp.m_width + x) * 3;
+      bmp.m_buffer[idx] = 255;      // Red
+      bmp.m_buffer[idx + 1] = 255;  // Green
+      bmp.m_buffer[idx + 2] = 255;  // Blue
+    }
+  }
 
  private:
   int x, y;

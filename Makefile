@@ -8,7 +8,10 @@ rebuild: clean build
 
 build:
 	@cmake -S . -B $(BUILD_DIR)
-	@cmake --build $(BUILD_DIR) --target example
+	@cmake --build $(BUILD_DIR) --target scene
+
+run: build
+	@./$(BUILD_DIR)/scene
 
 clean:
 	@rm -rf $(BUILD_DIR) *.log

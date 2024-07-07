@@ -1,0 +1,7 @@
+0 0 1000 1000
+point 100 100
+point 900 900
+point 10 5
+rect 1 2 3 4
+hline 100 200 50
+vline 100 200 40
