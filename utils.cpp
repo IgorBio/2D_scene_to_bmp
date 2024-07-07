@@ -36,6 +36,9 @@ std::vector<std::shared_ptr<Object>> parse_file(const std::string& filename,
     } else if (type == "vline") {
       ss >> y1 >> y2 >> x1;
       objects.push_back(std::make_shared<VLine>(y1, y2, x1));
+    } else if (type == "sline") {
+      ss >> x1 >> y1 >> x2 >> y2;
+      objects.push_back(std::make_shared<SLine>(x1, y1, x2, y2));
     }
   }
   return objects;
